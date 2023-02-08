@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./assets/retro-living-room-interior-design.jpg');
+    background-position: bottom;
+    background-size:cover ;
+    background-repeat: no-repeat;  
+    height: 110vh;
+    /* font-size: 62.5%; */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    /* background-size: 100%; */
+}
+
+.container {
+    width: 90vw;
+    margin: auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header-logo {
+    align-self: flex-end;
+    height: 70px;
+    padding-bottom: 15px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffffff;
+    height: 100%;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    font-size: 30;
+    margin-right: 50px;
+    font-weight: 900;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.contact-icon {
+    font-size: 30;
+    margin-right: 0px;
+    margin: 0;
+}
+
+.contact-icon svg {
+    width: 25vw;
+}
+
+.call-outline {
+    margin: 0;
+}
+
+.contact-callus {
+    font-size: 30;
+    font-weight: 800;
+}
+
+.hero {
+    width: 50%;
+    margin-top: 22vh;
+}
+
+.hero-heading {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+}
+
+.box {
+    width: 250px;
+    background-color: #c2bebe9d;
+    padding: 18px;
+    margin-bottom: 45px;
+}
+
+.box-icons {
+    width: max-content;
+    background-color: #ffffff;
+    padding: 3px 16px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+}
+
+.box-icon {
+    color: #000000;
+    font-size: 22px;
+}
+
+.box-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.box1 {
+    position: absolute;
+    top: 28%;
+    right: 18%;
+}
+
+.box2 {
+    position: absolute;
+    bottom: 6%;
+    right: 38%;
+}
