@@ -1,145 +1,316 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
 body {
-    background: url('./assets/retro-living-room-interior-design.jpg');
-    background-position: bottom;
-    background-size:cover ;
-    background-repeat: no-repeat;  
-    height: 110vh;
-    /* font-size: 62.5%; */
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    /* background-size: 100%; */
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }
 
-.container {
-    width: 90vw;
-    margin: auto;
+img {
+    max-width: 100%;
 }
 
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-}
-
-.header-logo {
-    align-self: flex-end;
-    height: 70px;
-    padding-bottom: 15px;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #ffffff;
-    height: 100%;
-}
-
-.nav-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ul li {
     list-style: none;
 }
 
-.nav-item {
-    font-size: 30;
-    margin-right: 50px;
-    font-weight: 900;
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
-.contact {
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-
+    margin-inline: 6rem;
+    padding-top: 3rem;
+    color: #ffffff;
+    z-index: +111;
 }
 
-
-.contact-icon {
-    font-size: 30;
-    margin-right: 0px;
-    margin: 0;
+.logo {
+    margin-top: 4rem;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #ffffff;
 }
 
-.contact-icon svg {
-    width: 25vw;
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.call-outline {
-    margin: 0;
+nav ul li {
+    margin-right: 5rem;
+    cursor: pointer;
+}
+nav ul li a {
+    font-size: 2rem;
+    color: #ffffff;
 }
 
-.contact-callus {
-    font-size: 30;
-    font-weight: 800;
+.call-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.phone-icon {
+    margin-right: 1.5rem;
+}
+
+.phone-icon img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    color: #ffffff;
 }
 
 .hero {
-    width: 50%;
-    margin-top: 22vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url(./assets/retro-living-room-interior-design.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero-left {
+    margin: 0 50rem 0 6rem;
 }
 
 .hero-heading {
-    font-size: 70px;
-    font-weight: 700;
-    margin-bottom: 50px;
-}
-
-.hero-btn {
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 1.2;
     color: #ffffff;
-    padding: 15px 30px;
-    border: 1px solid #fff;
-    border-radius: 40px;
+}
+.hero-button button {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    margin-top: 3rem;
+    padding: 1.5rem 3.5rem;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
 }
 
-.box {
-    width: 250px;
-    background-color: #c2bebe9d;
-    padding: 18px;
-    margin-bottom: 45px;
+.hero-right {
+    margin-right: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.box-icons {
-    width: max-content;
+.card-1 {
+    position: absolute;
+    top: -15rem;
+    right: 10rem;
+}
+
+.card-2 {
+    position: absolute;
+    top: 10rem;
+    right: 50rem;
+}
+.card {
+    width: 20rem;
+    height: 12rem;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon img {
+    margin-left: 2rem;
+}
+
+.detail {
+    margin-top: 1rem;
+    padding: 0 2rem;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.line {
+    position: relative;
+    top: 68%;
+    margin-left: 5rem;
+    width: 10rem;
+    height: 0.1rem;
     background-color: #ffffff;
-    padding: 3px 16px;
-    border-radius: 15px;
-    margin-bottom: 8px;
+    transform: rotate(90deg);
 }
 
-.box-icon {
-    color: #000000;
-    font-size: 22px;
+.circle {
+    position: relative;
+    top: 95%;
+    left: 20%;
+    margin-left: 5rem;
+    width: 2rem;
+    border-radius: 50px;
+    height: 2rem;
+    background-color: #ffffff;
 }
 
-.box-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-bottom: 10px;
+.line-1 {
+    position: relative;
+    top: -22%;
+    left: 75%;
+    margin-left: 5rem;
+    width: 10rem;
+    height: 0.1rem;
+    background-color: #ffffff;
 }
 
-.box1 {
-    position: absolute;
-    top: 28%;
-    right: 18%;
+.circle-1 {
+    position: relative;
+    top: -28%;
+    left: 117%;
+    margin-left: 5rem;
+    width: 2rem;
+    border-radius: 50px;
+    height: 2rem;
+    background-color: #ffffff;
 }
 
-.box2 {
-    position: absolute;
-    bottom: 6%;
-    right: 38%;
+@media screen and (max-width: 1250px) {
+    header {
+        margin-inline: 4rem;
+        padding-top: 2rem;
+    }
+
+    .logo {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    nav ul li {
+        margin-right: 2.5rem;
+        cursor: pointer;
+    }
+    nav ul li a {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    .call-us-number {
+        font-size: 1rem;
+    }
+
+    .hero-heading {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    nav {
+        border-bottom: none;
+    }
+    nav ul {
+        display: none;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-left {
+        margin: 50rem 0 0 0;
+    }
+
+    .card-1 {
+        top: 10rem;
+        left: 2rem;
+    }
+    .card-2 {
+        top: 30rem;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 15rem;
+    }
+    .line {
+        top: 62%;
+        left: -7%;
+    }
+    .line-1 {
+        left: 60%;
+    }
 }
